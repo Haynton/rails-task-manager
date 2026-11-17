@@ -8,3 +8,43 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ a {
+  text-decoration: none;
+  color: black;
+ }
+.container {
+    margin: auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+}
+
+.form form {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+    font-size: large;
+}
+.form-head {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    padding: 12px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+}

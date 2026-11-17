@@ -1,0 +1,16 @@
+<h1>Side Quest</h1>
+
+<% @tasks.each do |task| %>
+  <div class="form">
+    <%= form_with model: task do |f| %>
+      <div class="form-head">
+        <%= f.check_box :completed, onchange: "this.form.requestSubmit()" %>
+        <%= link_to task.title, task_path(task) %>
+      </div>
+      <%= link_to "X", task_path(task), data: {turbo_method: :delete} %>
+    <% end %>
+  </div>
+<% end %>
+
+
+<%= link_to "add new side quest", new_task_path, class: "btn" %>

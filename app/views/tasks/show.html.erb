@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+<%= form_with model: @task do |f| %>
+  <%= f.check_box :completed, onchange: "this.form.requestSubmit()" %>
+<% end %>
+<p><%= @task.details %></p>
+<%= link_to "Edit your side quest", edit_task_path %>
+<%= link_to "Delete", task_path(@task), data: {turbo_method: :delete} %>
+<hr>
+<%= link_to "go back", tasks_path %>
